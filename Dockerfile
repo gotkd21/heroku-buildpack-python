@@ -1,9 +1,9 @@
-FROM heroku/heroku:16-build
+FROM heroku/heroku:18
 
 WORKDIR /app
 ENV WORKSPACE_DIR="/app/builds" \
     S3_BUCKET="lang-python" \
-    S3_PREFIX="heroku-16/"
+    S3_PREFIX="heroku-18/"
 
 RUN apt-get update && apt-get install -y python-pip && rm -rf /var/lib/apt/lists/*
 
