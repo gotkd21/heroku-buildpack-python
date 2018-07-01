@@ -1,6 +1,5 @@
 #!/bin/bash
 
-export
 . ${BUILDPACK_TEST_RUNNER_HOME}/lib/test_utils.sh
 
 testDeterminePython27() {
