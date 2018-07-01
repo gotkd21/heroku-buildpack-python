@@ -1,5 +1,6 @@
 #!/bin/bash
 
+export
 source /apps/test/utils.sh
 
 testDeterminePython27() {
