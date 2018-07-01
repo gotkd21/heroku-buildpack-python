@@ -6,9 +6,9 @@ testDeterminePython27() {
     touch ${HOME}/test-runtime.txt
     echo "python-2.7.14" >| ${HOME}/test-runtime.txt
 
-    capture compile
+    compile
 
     assertContains "Unfortunately" "`cat ${STD_OUT}`"
     assertEquals 1 ${rtrn}
-    
+
 }
