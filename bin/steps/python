@@ -10,7 +10,7 @@ VENDORED_PYTHON="${VENDOR_URL}/runtimes/$PYTHON_VERSION.tar.gz"
 echo "${PYTHON_VERSION}"
 echo 'Now assessing python'
 if [ -f ${BUILD_DIR}/test-runtime.txt]; then
-    $PYTHON_VERSION < ${BUILD_DIR}/test-runtime.txt
+    $PYTHON_VERSION=$(cat "${BUILD_DIR}/test-runtime.txt")
     echo "${PYTHON_VERSION}"
 fi
 
