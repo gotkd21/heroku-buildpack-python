@@ -9,11 +9,7 @@ testDeterminePython27() {
     compile
 
     assertContains "Unfortunately," "`cat ${STD_OUT}`"
-    assertContains "heroku stack:set heroku-16" "`cat ${STD_OUT}`"
     assertEquals 1 ${rtrn}
 }
 
 echo "This is a test" > $STD_OUT
-
-compile
-echo "Compiled"
