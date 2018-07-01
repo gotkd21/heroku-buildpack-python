@@ -49,12 +49,12 @@ export VENDOR_URL
 # These variables are used to specify which versions of Python to install by default,
 # as well as prompt the user to upgrade if they are using an un–supported version.
 # Note: When 3.7 lands, I recommend switching to LATEST_36 and LATEST_37.
-DEFAULT_PYTHON_VERSION="python-3.6.6"
+DEFAULT_PYTHON_VERSION="python-2.7.15"
 LATEST_3="python-3.6.6"
 LATEST_2="python-2.7.15"
 
 # Which stack is used (for binary downloading), if none is provided (e.g. outside of Heroku)?
-DEFAULT_PYTHON_STACK="cedar-14"
+DEFAULT_PYTHON_STACK="heroku18"
 # If pip doesn't match this version (the version we install), run the installer.
 PIP_UPDATE="9.0.2"
 
@@ -178,7 +178,7 @@ source "$BIN_DIR/steps/hooks/pre_compile"
 # continue to use that version of Python in perpituity (warnings will be raised if
 # they are out–of–date).
 if [ -f "$CACHE_DIR/.heroku/python-version" ]; then
-  DEFAULT_PYTHON_VERSION=$(cat "$CACHE_DIR/.heroku/python-version")
+#  DEFAULT_PYTHON_VERSION=$(cat "$CACHE_DIR/.heroku/python-version")
 fi
 
 # We didn't always record the stack version. This code is in place because of that.
