@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export
-source ${BUILDPACK_TEST_RUNNER_HOME}/lib/test_utils.sh
+. ${BUILDPACK_TEST_RUNNER_HOME}/lib/test_utils.sh
 
 testDeterminePython27() {
     touch ${BUILD_DIR}/test-runtime.txt
