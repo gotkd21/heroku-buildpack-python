@@ -9,6 +9,8 @@ testDeterminePython27() {
     if [ -f ${BUILD_DIR}/test-runtime.txt] then
         cat ${BUILD_DIR}/test-runtime.txt > $STD_OUT
         echo "${PYTHON_VERSION}"
+    else
+        echo "No change"
     fi
 
 
