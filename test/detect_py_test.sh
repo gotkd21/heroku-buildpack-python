@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export
-source /apps/test/utils.sh
+source ${BUILDPACK_TEST_RUNNER_HOME}/lib/test_utils.sh
 
 testDeterminePython27() {
     touch ${BUILD_DIR}/test-runtime.txt
@@ -14,3 +14,4 @@ testDeterminePython27() {
 }
 
 echo "This is a test" > $STD_OUT
+testDeterminePython27
