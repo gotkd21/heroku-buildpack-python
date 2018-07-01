@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. ${BUILDPACK_TEST_RUNNER_HOME}/test/utils.sh
+source /apps/test/utils.sh
 
 testDeterminePython27() {
     touch ${BUILD_DIR}/test-runtime.txt
