@@ -6,11 +6,9 @@ testDeterminePython27() {
     touch ${BUILD_DIR}/test-runtime.txt
     echo "python-2.7.14" >| ${BUILD_DIR}/test-runtime.txt
 
-    if [ -f ${BUILD_DIR}/test-runtime.txt] then
+    if [ -f ${BUILD_DIR}/test-runtime.txt]; then
         cat ${BUILD_DIR}/test-runtime.txt > $STD_OUT
         echo "${PYTHON_VERSION}"
-    else
-        echo "No change"
     fi
 
 
