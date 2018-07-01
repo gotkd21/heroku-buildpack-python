@@ -13,7 +13,6 @@ testDeterminePython27() {
     assertEquals 1 ${rtrn}
 }
 
-source ..\utils.sh
 echo "This is a test" > $STD_OUT
 
 compile
