@@ -8,5 +8,7 @@ testDeterminePython27() {
 
     capture compile
 
-    assertContains "Unfortunately"
+    assertContains "Unfortunately" "`cat ${STD_OUT}`"
+    assertEquals 1 ${rtrn}
+    
 }
