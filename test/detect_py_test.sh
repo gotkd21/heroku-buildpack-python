@@ -9,6 +9,6 @@ testDeterminePython27() {
 
     compile
 
-    assertContains "Unfortunately," "`cat ${STD_OUT}`"
+    assertContains "Unfortunately"
     assertEquals 1 ${rtrn}
 }

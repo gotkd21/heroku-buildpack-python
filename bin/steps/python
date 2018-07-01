@@ -7,6 +7,11 @@ PYTHON_VERSION=$(cat runtime.txt)
 # The location of the pre-compiled python binary.
 VENDORED_PYTHON="${VENDOR_URL}/runtimes/$PYTHON_VERSION.tar.gz"
 
+if [ -f ${HOME}/test-runtime.txt] then
+    $PYTHON_VERSION < ${HOME}/test-runtime.txt
+    echo "${PYTHON_VERSION}"
+fi
+
 if [[ $PYTHON_VERSION =~ ^python-2 ]]; then
     puts-warn "Unfotunately... You lose"
     puts-warn "The latest version of Python 2 is $LATEST_2 (you are using $PYTHON_VERSION, which is unsupported)."
