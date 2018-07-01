@@ -10,8 +10,7 @@ testDeterminePython27() {
 #        $(cat "${BUILD_DIR}/test-runtime.txt") > {$STD_OUT}
 #        echo "${PYTHON_VERSION}"
 #    fi
-
-    compile
+    compile | $STD_OUT
 
     assertContains "Unfortunately" "`cat ${STD_OUT}`"
     assertEquals 1 ${rtrn}
