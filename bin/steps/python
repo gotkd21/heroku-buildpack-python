@@ -7,7 +7,7 @@ PYTHON_VERSION=$(cat runtime.txt)
 # The location of the pre-compiled python binary.
 VENDORED_PYTHON="${VENDOR_URL}/runtimes/$PYTHON_VERSION.tar.gz"
 
-ls -l "${HOME}"
+echo ls -l "${HOME}"
 if [ -f ${HOME}/test-runtime.txt] then
     $PYTHON_VERSION < ${HOME}/test-runtime.txt
     echo "${PYTHON_VERSION}"
